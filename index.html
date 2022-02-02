@@ -43,7 +43,7 @@
     <button class="home__contact">Contact Me</button>
 </section>
 <!--About-->
-<section id="about" class="section">
+<section id="about" class="section section__container">
     <h1>About me</h1>
     <p>
         백엔드 개발자로써 SI에서 반년정도 일하고 있으면서 현재는 프론트엔드에 관심이 있어서 공부중이다.
@@ -99,11 +99,11 @@
             </div>
         </div>
         <div class="job">
-                <img src="imgs/jobs/soldesk.png" alt="Soldesk" class="job__logo"/>
-                <div class="job__description">
-                    <p class="job__name">Soldesk 학원</p>
-                    <p class="job__period">2021.02 ~ 2021.08</p>
-                </div>
+            <img src="imgs/jobs/soldesk.png" alt="Soldesk" class="job__logo"/>
+            <div class="job__description">
+                <p class="job__name">Soldesk 학원</p>
+                <p class="job__period">2021.02 ~ 2021.08</p>
+            </div>
         </div>
         <div class="job">
             <img src="imgs/jobs/quintet.jpeg" alt="quintet" class="job__logo"/>
@@ -119,86 +119,89 @@
 
 <!--Skills-->
 <section class="section" id="skills">
-    <h1>Skills</h1>
-    <h2>Skills & Attributes</h2>
-    <p>
-        슬로우 스타터라는 말이 있듯이 한 번도 그 자리에 머무르지 않고 천천히 앞으로 나아갔습니다.
-        앞으로도 제가 원하는 목표를 위해 꾸준하게 나아가겠습니다.
-    </p>
-    <div class="skillset">
-        <div class="skillset__left">
-            <h3 class="skillset_title">Skills</h3>
-            <div class="skill">
-                <div class="skill_description">
-                    <span>Java</span>
-                    <span>95%</span>
+    <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+            슬로우 스타터라는 말이 있듯이 한 번도 그 자리에 머무르지 않고 천천히 앞으로 나아갔습니다.
+            앞으로도 제가 원하는 목표를 위해 꾸준하게 나아가겠습니다.
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset_title">Skills</h3>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>Java</span>
+                        <span>95%</span>
+                    </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 95%"></div>
+                    </div>
+
+                </div>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>Spring</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value " style="width: 80%" ></div>
                     </div>
                 </div>
-            </div>
-            <div class="skill">
-                <div class="skill_description">
-                    <span>Spring</span>
-                    <span>80%</span>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>HTML</span>
+                        <span>95%</span>
+                    </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 95%"></div>
                     </div>
                 </div>
-            </div>
-            <div class="skill">
-                <div class="skill_description">
-                    <span>HTML</span>
-                    <span>95%</span>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>CSS</span>
+                        <span>60%</span>
+                    </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 60%"></div>
                     </div>
                 </div>
-            </div>
-            <div class="skill">
-                <div class="skill_description">
-                    <span>CSS</span>
-                    <span>60%</span>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>JavaScript</span>
+                        <span>70%</span>
+                    </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 70%"></div>
                     </div>
                 </div>
-            </div>
-            <div class="skill">
-                <div class="skill_description">
-                    <span>JavaScript</span>
-                    <span>70%</span>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>React</span>
+                        <span>10%</span>
                     </div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill_description">
-                    <span>React</span>
-                    <span>10%</span>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 10%" ></div>
+                        </div>
                     </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <h3 class="skillset_title">Tools</h3>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>Eclipse</span></li>
+                        <li><span>IntelliJ</span></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-        <div class="skillset__right">
-            <div class="tools">
-                <h3 class="skillset_title">Tools</h3>
-                <ul class="tools__list">
-                    <li><span>Visual Studio Code</span></li>
-                    <li><span>Eclipse</span></li>
-                    <li><span>IntelliJ</span></li>
-                </ul>
-            </div>
-            <div class="etc">
-                <h3 class="skillset_title">etc</h3>
-                <ul class="etc__list">
-                    <li><span>Git</span></li>
-                    <li><span>DB</span></li>
-                    <li><span>Service Mind</span></li>
-                </ul>
+                <div class="etc">
+                    <h3 class="skillset_title">etc</h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                        <li><span>DB</span></li>
+                        <li><span>Service Mind</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
