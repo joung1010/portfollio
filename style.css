@@ -6,7 +6,7 @@
     --color-dark-white: #bdbdbd;
     --color-pink: #fe918d;
     --color-dark-pink: #ff6863;
-    --color-grey:#808080FF;
+    --color-grey: #808080FF;
     --color-dark-grey: #4d4d4d;
     --color-light-grey: #7c7979;
     --color-blue: #007DFEFF;
@@ -55,6 +55,7 @@ ul {
     padding-left: 0;
 
 }
+
 button {
     background-color: transparent;
     cursor: pointer;
@@ -127,7 +128,7 @@ p {
 /*Home*/
 
 #home {
-    background:center/cover no-repeat url("imgs/projectBackground.png") ;
+    background: center/cover no-repeat url("imgs/projectBackground.png");
     padding: 40px;
     text-align: center;
 
@@ -139,6 +140,7 @@ p {
     border-radius: 50%;
     border: 2px solid var(--color-light-white);
 }
+
 .home__title,
 .home__description {
     color: var(--color-white);
@@ -149,7 +151,7 @@ p {
     font-weight: var(--weight-semi-bold);
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid  var(--color-white);
+    border: 2px solid var(--color-white);
     border-radius: var(--size-border-radious);
 }
 
@@ -159,6 +161,7 @@ p {
     padding: 50px;
     margin: auto;
 }
+
 .section__container {
     max-width: 1200px;
     margin: auto;
@@ -185,38 +188,47 @@ p {
     margin-bottom: 16px;
     color: var(--color-blue);
 }
+
 .major__icon i {
-    transition:all var(--animation-duration) ease ;
+    transition: all var(--animation-duration) ease;
 }
+
 .major__icon i:hover {
     color: var(--color-pink);
     transform: rotate(-30deg) scale(1.2);
 }
-.major__title,.major__description {
+
+.major__title, .major__description {
     color: var(--color-dark-grey);
 }
 
 .major__description {
     font-size: var(--font-small);
 }
+
 .job {
     display: flex;
     align-items: center;
 }
+
 .job__description {
     margin: 0 16px;
     text-align: left;
 }
-.job__name,.job__period {
+
+.job__name, .job__period {
     color: var(--color-light-grey);
 
 }
+
 .job__name {
     font-size: var(--font-small);
 }
+
 .job__period {
     font-size: var(--font-micro);
 }
+
 .job__logo {
     width: 65px;
     height: 65px;
@@ -233,26 +245,32 @@ p {
     color: var(--color-light-white);
     margin: 20px 0;
 }
+
 .skillset_title {
     color: var(--color-white);
 }
+
 .skillset__left {
     flex-basis: 60%;
     background-color: var(--color-dark-grey);
     padding: 20px 40px;
 }
+
 .skill_description {
     display: flex;
     justify-content: space-between;
 }
+
 .skill {
     margin-bottom: 20px;
 }
+
 .skill__bar {
     width: 100%;
     height: 3px;
     background: var(--color-grey);
 }
+
 .skill__value {
     height: 3px;
     background-color: var(--color-orange);
@@ -265,6 +283,98 @@ p {
 .tools {
     background-color: var(--color-grey);
 }
-.tools,.etc {
+
+.tools, .etc {
     padding: 20px;
+}
+
+/* Work */
+.work__categories {
+    margin: 40px;
+}
+
+.category__btn {
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radious);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+
+.category__btn.active, .category__btn:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+    opacity: 1;
+    top: 0;
+}
+.category__count {
+    background-color: var(--color-dark-blue);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    position: relative;
+    top: -24px;
+    left: -4px;
+    opacity: 0;
+    transition:all var(--animation-duration) ease;
+}
+.work__projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.project {
+    width: 280px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    position: relative;
+    background-color: var(--color-light-white);
+}
+.project__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.project__description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--animation-duration) ease-in;
+}
+.project:hover .project__description {
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+.project__description h3 {
+    color: var(--color-white);
+}
+
+.project__description h3:after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: 8px;
+    background-color: var(--color-dark-white);
+    display: block;
 }
