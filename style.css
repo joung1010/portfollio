@@ -124,6 +124,14 @@ p {
 .navbar__menu__item:hover {
     background-color: var(--color-dark-blue);
 }
+.navbar__toggle-btn {
+    position: absolute;
+    right: 38px;
+    top: 24px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
 
 /*Home*/
 
@@ -435,4 +443,39 @@ p {
 .contact_link i:hover {
     transform: scale(1.2);
     color: var(--color-pink);
+}
+
+/* For bleow 768px screen width */
+@media  screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+    }
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    div.navbar__menu {
+        width: 100%;
+    }
+    .nav__menu {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    .about__majors {
+        flex-direction: column;
+    }
+    .major {
+        margin-bottom: 38px;
+    }
+    .skillset {
+        flex-direction: column;
+    }
+    .project {
+        flex-grow: 1;
+    }
+    .testimonials__avator {
+        width: 80px;
+        height: 80px;
+    }
 }
