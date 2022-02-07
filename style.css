@@ -93,10 +93,13 @@ p {
 
 #navbar {
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    background-color: var(--color-blue);
+    background-color: transparent;
     align-items: center;
     padding: 16px;
+    width: 100%;
+    transition:all var(--animation-duration) ease-in-out ;
 }
 
 .navbar__logo {
@@ -132,12 +135,17 @@ p {
     color: var(--color-white);
     display: none;
 }
+#navbar.navbar--dark {
+    background-color: var(--color-blue);
+    padding: 8px;
+}
 
 /*Home*/
 
 #home {
     background: center/cover no-repeat url("imgs/projectBackground.png");
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 
 }
