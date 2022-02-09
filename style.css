@@ -454,6 +454,25 @@ p {
     color: var(--color-pink);
 }
 
+.btn_arrow {
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    background-color: var(--color-blue);
+    border-radius:50%;
+    width: 60px;
+    height: 60px;
+    color: var(--color-white);
+    font-size: var(--font-large);
+    opacity: 0;
+    transition: opacity var(--animation-duration) ease-in;
+    pointer-events: none;
+}
+.btn_arrow.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* For bleow 768px screen width */
 @media  screen and (max-width: 768px) {
     .navbar__toggle-btn {
