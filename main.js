@@ -51,19 +51,33 @@ const projectContainer = document.querySelector('.work__projects');
 const projectsAll = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click',(e)=>{
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if (filter == null) {
+    const categoryBtns = document.querySelectorAll('.category__btn');
+    let targetBtn = e.target;
+    if (filter == null || targetBtn == null) {
         return;
     }
-    projectsAll.forEach((project)=>{
-        console.log(project.dataset.type);
-        console.log(project);
-        if (filter === '*' || filter === project.dataset.type) {
-            project.classList.remove('invisible');
-        } else {
-            project.classList.add('invisible');
-        }
-    });
 
+    if (targetBtn.className === 'category__count') {
+        targetBtn = targetBtn.parentElement;
+    }
+    if (filter === targetBtn.dataset.filter) {
+        categoryBtns.forEach((categoryBtn)=>{
+            categoryBtn.classList.remove('active')
+        });
+        targetBtn.classList.add('active');
+    }
+
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projectsAll.forEach((project)=>{
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+            projectContainer.classList.remove('anim-out');
+        });
+    },300);
 
 });
 
