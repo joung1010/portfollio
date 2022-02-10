@@ -51,21 +51,16 @@ const projectContainer = document.querySelector('.work__projects');
 const projectsAll = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click',(e)=>{
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    const categoryBtns = document.querySelectorAll('.category__btn');
+
     let targetBtn = e.target;
     if (filter == null || targetBtn == null) {
         return;
     }
-
-    if (targetBtn.className === 'category__count') {
-        targetBtn = targetBtn.parentElement;
-    }
-    if (filter === targetBtn.dataset.filter) {
-        categoryBtns.forEach((categoryBtn)=>{
-            categoryBtn.classList.remove('active')
-        });
-        targetBtn.classList.add('active');
-    }
+    //remove selection from the previous item and selct the new one
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode
+    target.classList.add('selected');
 
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
