@@ -12,13 +12,24 @@ document.addEventListener("scroll", ()=>{
 
 //Handle scrolling
 const navbarMenu = document.querySelector('.navbar__menu');
+const toggleNavMenu = document.querySelector('ul.nav__menu');
 navbarMenu.addEventListener('click',(event)=>{
    const target = event.target;
    const link = target.dataset.link;
     if (link == null) {
         return;
     }
+    toggleNavMenu.classList.remove('open');
     scrollIntoView(link);
+
+});
+
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',()=>{
+
+    toggleNavMenu.classList.toggle('open');
+
 
 });
 //Handle click on 'Contact me'
@@ -75,6 +86,7 @@ workBtnContainer.addEventListener('click',(e)=>{
     },300);
 
 });
+
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
