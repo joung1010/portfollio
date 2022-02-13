@@ -171,6 +171,9 @@ p {
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radious);
 }
+.home__contact:hover {
+    background-color: var(--color-blue);
+}
 
 /* Section Common */
 .section {
@@ -315,6 +318,7 @@ p {
     border-radius: var(--size-border-radious);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected, .category__btn:hover {
@@ -330,13 +334,13 @@ p {
     background-color: var(--color-dark-blue);
     border-radius: 50%;
     color: var(--color-white);
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: inline-block;
-    line-height: 20px;
-    position: relative;
-    top: -24px;
-    left: -4px;
+    line-height: 24px;
+    position: absolute;
+    top: 4px !important;
+    right: 16px;
     opacity: 0;
     transition:all var(--animation-duration) ease;
 }
@@ -484,8 +488,18 @@ p {
 
 /* For bleow 768px screen width */
 @media  screen and (max-width: 768px) {
+    :root {
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
     .navbar__toggle-btn {
         display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
     }
     #navbar {
         flex-direction: column;
@@ -495,6 +509,12 @@ p {
     #navbar.navbar--dark {
         padding: 16px;
     }
+    .section {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
+
     div.navbar__menu {
         width: 100%;
     }
@@ -508,18 +528,47 @@ p {
     }
     .about__majors {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .major {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
     .skillset {
         flex-direction: column;
     }
+    .category__btn {
+        margin: 4px 0;
+        width: 100%;
+    }
+
     .project {
         flex-grow: 1;
     }
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 ;
+    }
+    .testimonials__speech-bubble {
+        order: 1;
+    }
     .testimonials__avator {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
+    }
+    .testimonials__avator:nth-child(even),
+    .testimonials__avator:nth-child(odd){
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .btn_arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
     }
 }
