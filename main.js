@@ -2,7 +2,7 @@
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener("scroll", ()=>{
+document.addEventListener("scroll", () => {
     if (window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
     } else {
@@ -13,9 +13,9 @@ document.addEventListener("scroll", ()=>{
 //Handle scrolling
 const navbarMenu = document.querySelector('.navbar__menu');
 const toggleNavMenu = document.querySelector('ul.nav__menu');
-navbarMenu.addEventListener('click',(event)=>{
-   const target = event.target;
-   const link = target.dataset.link;
+navbarMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
     if (link == null) {
         return;
     }
@@ -26,7 +26,7 @@ navbarMenu.addEventListener('click',(event)=>{
 
 
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-navbarToggleBtn.addEventListener('click',()=>{
+navbarToggleBtn.addEventListener('click', () => {
 
     toggleNavMenu.classList.toggle('open');
 
@@ -34,33 +34,33 @@ navbarToggleBtn.addEventListener('click',()=>{
 });
 //Handle click on 'Contact me'
 const contactBtn = document.querySelector('.home__contact')
-contactBtn.addEventListener('click',(event) =>{
+contactBtn.addEventListener('click', (event) => {
     scrollIntoView('#contact');
 });
 
 // Make home slowly fade to transparent
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener("scroll", ()=>{
-    home.style.opacity =  1 - (window.scrollY/homeHeight);
+document.addEventListener("scroll", () => {
+    home.style.opacity = 1 - (window.scrollY / homeHeight);
 });
 
 const arrowUp = document.querySelector('.btn_arrow');
-document.addEventListener("scroll", ()=>{
+document.addEventListener("scroll", () => {
     if (window.scrollY > homeHeight / 2) {
         arrowUp.classList.add('visible');
-    }else{
+    } else {
         arrowUp.classList.remove('visible');
     }
 })
-arrowUp.addEventListener('click',()=>{
+arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projectsAll = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click',(e)=>{
+workBtnContainer.addEventListener('click', (e) => {
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
 
     let targetBtn = e.target;
@@ -75,7 +75,7 @@ workBtnContainer.addEventListener('click',(e)=>{
 
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
-        projectsAll.forEach((project)=>{
+        projectsAll.forEach((project) => {
             if (filter === '*' || filter === project.dataset.type) {
                 project.classList.remove('invisible');
             } else {
@@ -83,12 +83,30 @@ workBtnContainer.addEventListener('click',(e)=>{
             }
             projectContainer.classList.remove('anim-out');
         });
-    },300);
+    }, 300);
 
 });
+//1. 모든 섹션 요소들을 가지고 온다
+//2. IntersectionObserver 를 이용해서 모든 섹션들을 관찰한다
+//3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
+const sectionIds = ['#home', '#about', '#skills', '#work', '#testimonials', '#contact'];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector('[data-link="'+id+'"]'));
 
+const observerOptions ={
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3
+}
+const observerCallback = (entries, observer) =>{
+    entries.forEach(entry =>{
+        console.log(entry.target);
+    });
+}
+const observer = new IntersectionObserver(observerCallback,observerOptions);
+sections.forEach(section => observer.observe(section));
 
-function scrollIntoView(selector){
+function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
 }

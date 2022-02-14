@@ -123,7 +123,7 @@ p {
 }
 
 
-.navbar__menu__item:hover {
+.navbar__menu__item:hover, .navbar__menu__item.active {
     background-color: var(--color-dark-blue);
     border-color: var(--color-white);
 }
