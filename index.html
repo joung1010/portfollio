@@ -1,332 +1,394 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mason's Page</title>
-    <meta name="description" content="Practice Front-end for back-end engineer Mason">
-    <meta name="author" content="Mason">
-    <script src="https://kit.fontawesome.com/07ccf7feb5.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap"
-          rel="stylesheet">
-    <link rel="icon" type="image/png" href="imgs/fapicon.png">
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Practice Front-end for back-end engineer Mason"
+    />
+    <meta name="author" content="Mason" />
+    <script
+      src="https://kit.fontawesome.com/07ccf7feb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="imgs/fapicon.png" />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
-<!--Navbar-->
-<nav id="navbar">
-    <div class="navbar navbar__logo">
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav id="navbar">
+      <div class="navbar navbar__logo">
         <i class="fab fa-angellist"></i>
         <a href="#">Mason</a>
-    </div>
-    <div class="navbar__menu">
+      </div>
+      <div class="navbar__menu">
         <ul class="nav__menu">
-            <li class="navbar__menu__item active" data-link="#home">Home</li>
-            <li class="navbar__menu__item" data-link="#about">About</li>
-            <li class="navbar__menu__item" data-link="#skills">Skills</li>
-            <li class="navbar__menu__item" data-link="#work">My work</li>
-            <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
-            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Skills</li>
+          <li class="navbar__menu__item" data-link="#work">My work</li>
+          <li class="navbar__menu__item" data-link="#testimonials">
+            Testimonial
+          </li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
-    </div>
-    <!-- Toggle button -->
-    <button class="navbar__toggle-btn">
+      </div>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
         <i class="fas fa-bars"></i>
-    </button>
-</nav>
-<!--Home-->
-<section id="home">
-  <div class="home__container">
-      <img src="imgs/itsme.jpg" alt="Mason's photo" class="home__avatar">
-      <h1 class="home__title">Hello <br> I'm Mason</h1>
-      <h2 class="home__description">I'm Backend Also I can do very Well front</h2>
-      <button class="home__contact">Contact Me</button>
-  </div>
-</section>
-<!--About-->
-<section id="about" class="section section__container">
-    <h1>About me</h1>
-    <p>
-        백엔드 개발자로써 SI에서 반년정도 일하고 있으면서 현재는 프론트엔드에 관심이 있어서 공부중이다.
-        솔데스크 학언에서 팀프로젝트 팀장을 맡았고, 현재는 퀸텟시스템즈 회사에 소속중이다.
-        개발자 이전에는 호텔리어로(JW marriott SEOUL)써 약 2년정도 근무 했다.
-    </p>
-    <div class="about__majors">
+      </button>
+    </nav>
+    <!--Home-->
+    <section id="home">
+      <div class="home__container">
+        <img src="imgs/itsme.jpg" alt="Mason's photo" class="home__avatar" />
+        <h1 class="home__title">
+          Hello <br />
+          I'm Mason
+        </h1>
+        <h2 class="home__description">
+          I'm Backend Also I can do very Well front
+        </h2>
+        <button class="home__contact">Contact Me</button>
+      </div>
+    </section>
+    <!--About-->
+    <section id="about" class="section section__container">
+      <h1>About me</h1>
+      <p>
+        백엔드 개발자로써 SI에서 반년정도 일하고 있으면서 현재는 프론트엔드에
+        관심이 있어서 공부중이다. 솔데스크 학언에서 팀프로젝트 팀장을 맡았고,
+        현재는 퀸텟시스템즈 회사에 소속중이다. 개발자 이전에는 호텔리어로(JW
+        marriott SEOUL)써 약 2년정도 근무 했다.
+      </p>
+      <div class="about__majors">
         <div class="major">
-            <div class="major__icon">
-                <i class="fab fa-html5"></i>
-            </div>
-            <h2 class="major__title">
-                Front-end
-            </h2>
-            <div class="major__description">
-                HTML, CSS, javascript. jQuery <br>
-                React,APIs
-            </div>
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h2 class="major__title">Front-end</h2>
+          <div class="major__description">
+            HTML, CSS, javascript. jQuery <br />
+            React,APIs
+          </div>
         </div>
 
         <div class="major">
-            <div class="major__icon">
-                <i class="fab fa-java"></i>
-            </div>
-            <h2 class="major__title">
-                Back-end
-            </h2>
-            <div class="major__description">
-
-                Java: basic Java, MVC, IO, etc
-            </div>
+          <div class="major__icon">
+            <i class="fab fa-java"></i>
+          </div>
+          <h2 class="major__title">Back-end</h2>
+          <div class="major__description">Java: basic Java, MVC, IO, etc</div>
         </div>
         <div class="major">
-            <div class="major__icon">
-                <i class="fas fa-leaf"></i>
-            </div>
-            <h2 class="major__title">
-                Spring
-            </h2>
-            <div class="major__description">
-                Spring: basic Spring, Spring Batch, <br>
-                Spring boot, etc
-            </div>
+          <div class="major__icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h2 class="major__title">Spring</h2>
+          <div class="major__description">
+            Spring: basic Spring, Spring Batch, <br />
+            Spring boot, etc
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="about__jobs">
+      <div class="about__jobs">
         <div class="job">
-            <img src="imgs/jobs/jw%20logo.png" alt="Jw" class="job__logo"/>
-            <div class="job__description">
-                <p class="job__name">JW Marriott Seoul Concierge</p>
-                <p class="job__period">2019.03.13 ~ 2020.10.31</p>
-            </div>
+          <img src="imgs/jobs/jw%20logo.png" alt="Jw" class="job__logo" />
+          <div class="job__description">
+            <p class="job__name">JW Marriott Seoul Concierge</p>
+            <p class="job__period">2019.03.13 ~ 2020.10.31</p>
+          </div>
         </div>
         <div class="job">
-            <img src="imgs/jobs/soldesk.png" alt="Soldesk" class="job__logo"/>
-            <div class="job__description">
-                <p class="job__name">Soldesk 학원</p>
-                <p class="job__period">2021.02 ~ 2021.08</p>
-            </div>
+          <img src="imgs/jobs/soldesk.png" alt="Soldesk" class="job__logo" />
+          <div class="job__description">
+            <p class="job__name">Soldesk 학원</p>
+            <p class="job__period">2021.02 ~ 2021.08</p>
+          </div>
         </div>
         <div class="job">
-            <img src="imgs/jobs/quintet.jpeg" alt="quintet" class="job__logo"/>
-            <div class="job__description">
-                <p class="job__name">Quintet Systems Back-end Software Engineer</p>
-                <p class="job__period">2021.08.09 ~ ing</p>
-            </div>
+          <img src="imgs/jobs/quintet.jpeg" alt="quintet" class="job__logo" />
+          <div class="job__description">
+            <p class="job__name">Quintet Systems Back-end Software Engineer</p>
+            <p class="job__period">2021.08.09 ~ ing</p>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-
-</section>
-
-<!--Skills-->
-<section class="section" id="skills">
-    <div class="section__container">
+    <!--Skills-->
+    <section class="section" id="skills">
+      <div class="section__container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>
-            슬로우 스타터라는 말이 있듯이 한 번도 그 자리에 머무르지 않고 천천히 앞으로 나아갔습니다.
-            앞으로도 제가 원하는 목표를 위해 꾸준하게 나아가겠습니다.
+          슬로우 스타터라는 말이 있듯이 한 번도 그 자리에 머무르지 않고 천천히
+          앞으로 나아갔습니다. 앞으로도 제가 원하는 목표를 위해 꾸준하게
+          나아가겠습니다.
         </p>
         <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset_title">Skills</h3>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>Java</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 95%"></div>
-                    </div>
-
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>Spring</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value " style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>HTML</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>CSS</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 60%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>JavaScript</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>React</span>
-                        <span>10%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 10%"></div>
-                    </div>
-                </div>
+          <div class="skillset__left">
+            <h3 class="skillset_title">Skills</h3>
+            <div class="skill">
+              <div class="skill_description">
+                <span>Java</span>
+                <span>95%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 95%"></div>
+              </div>
             </div>
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset_title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>Visual Studio Code</span></li>
-                        <li><span>Eclipse</span></li>
-                        <li><span>IntelliJ</span></li>
-                    </ul>
-                </div>
-                <div class="etc">
-                    <h3 class="skillset_title">etc</h3>
-                    <ul class="etc__list">
-                        <li><span>Git</span></li>
-                        <li><span>DB</span></li>
-                        <li><span>Service Mind</span></li>
-                    </ul>
-                </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>Spring</span>
+                <span>80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
             </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>HTML</span>
+                <span>95%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>CSS</span>
+                <span>60%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>JavaScript</span>
+                <span>70%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>React</span>
+                <span>10%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset_title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>Eclipse</span></li>
+                <li><span>IntelliJ</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset_title">etc</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+                <li><span>DB</span></li>
+                <li><span>Service Mind</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
-<!--work-->
-<section class="section" id="work">
-    <div class="section__container">
+      </div>
+    </section>
+    <!--work-->
+    <section class="section" id="work">
+      <div class="section__container">
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn selected" data-filter="*">All <span class="category__count">8</span></button>
-            <button class="category__btn" data-filter="front-end">Front-end <span class="category__count">4</span></button>
-            <button class="category__btn" data-filter="back-end">Back-end <span class="category__count">4</span></button>
+          <button class="category__btn selected" data-filter="*">
+            All <span class="category__count">8</span>
+          </button>
+          <button class="category__btn" data-filter="front-end">
+            Front-end <span class="category__count">4</span>
+          </button>
+          <button class="category__btn" data-filter="back-end">
+            Back-end <span class="category__count">4</span>
+          </button>
         </div>
         <div class="work__projects">
-            <a href="https://github.com/joung1010/portfollio" class="project" target="_blank" data-type="front-end">
-                <img src="imgs/projects/project.PNG" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank" data-type="front-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank " data-type="front-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank" data-type="front-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank" data-type="back-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank" data-type="back-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank" data-type="back-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
-            <a href="" class="project" target="_blank" data-type="back-end">
-                <img src="imgs/projects/testProject.png" alt="front-end" class="project__img">
-                <div class="project__description">
-                    <h3>Front-End Web</h3>
-                    <span>CLone coding with HTML and CSS</span>
-                </div>
-            </a>
+          <a
+            href="https://github.com/joung1010/portfollio"
+            class="project"
+            target="_blank"
+            data-type="front-end"
+          >
+            <img
+              src="imgs/projects/project.PNG"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="front-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank " data-type="front-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="front-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="back-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="back-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="back-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="" class="project" target="_blank" data-type="back-end">
+            <img
+              src="imgs/projects/testProject.png"
+              alt="front-end"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Front-End Web</h3>
+              <span>CLone coding with HTML and CSS</span>
+            </div>
+          </a>
         </div>
-    </div>
-</section>
-<!--testimonials-->
-<section class="section" id="testimonials">
-    <div class="section__container">
+      </div>
+    </section>
+    <!--testimonials-->
+    <section class="section" id="testimonials">
+      <div class="section__container">
         <h1>testimonials</h1>
         <h3>See what they say about me</h3>
 
         <div class="testimonials">
-            <div class="testimonial">
-                <img src="imgs/testimonials/people1-200515-154332.jpg" alt="people" class="testimonials__avator">
-                <div class="testimonials__speech-bubble">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate illo nisi quisquam rerum!
-                        Aperiam
-                        aut, commodi distinctio doloribus id illo iure labore nostrum omnis qui! Beatae harum quidem
-                        totam
-                        voluptate!</p>
-                    <p class="name"><a href="">Mason</a>/Quintet</p>
-                </div>
+          <div class="testimonial">
+            <img
+              src="imgs/testimonials/people1-200515-154332.jpg"
+              alt="people"
+              class="testimonials__avator"
+            />
+            <div class="testimonials__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cupiditate illo nisi quisquam rerum! Aperiam aut, commodi
+                distinctio doloribus id illo iure labore nostrum omnis qui!
+                Beatae harum quidem totam voluptate!
+              </p>
+              <p class="name"><a href="">Mason</a>/Quintet</p>
             </div>
-            <div class="testimonial">
-                <div class="testimonials__speech-bubble">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate illo nisi quisquam rerum!
-                        Aperiam
-                        aut, commodi distinctio doloribus id illo iure labore nostrum omnis qui! Beatae harum quidem
-                        totam
-                        voluptate!</p>
-                    <p class="name"><a href="">Mason</a>/Quintet</p>
-                </div>
-                <img src="imgs/testimonials/people1-200515-154332.jpg" alt="people" class="testimonials__avator">
+          </div>
+          <div class="testimonial">
+            <div class="testimonials__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cupiditate illo nisi quisquam rerum! Aperiam aut, commodi
+                distinctio doloribus id illo iure labore nostrum omnis qui!
+                Beatae harum quidem totam voluptate!
+              </p>
+              <p class="name"><a href="">Mason</a>/Quintet</p>
             </div>
+            <img
+              src="imgs/testimonials/people1-200515-154332.jpg"
+              alt="people"
+              class="testimonials__avator"
+            />
+          </div>
         </div>
-    </div>
-</section>
-<!--contact-->
-<section class="section" id="contact">
-    <h1 class="contact_title">Let's Talk </h1>
-    <h2 class="contact_email">joung4342@gmail.com</h2>
-    <h1 class="contact_link">
-        <a href="https://github.com/joung1010" target="_blank"> <i class="fab fa-github-alt"></i></a>
-    </h1>
-    <p class="contact__rights">2022 Mason park - All rights reserved</p>
+      </div>
+    </section>
+    <!--contact-->
+    <section class="section" id="contact">
+      <h1 class="contact_title">Let's Talk</h1>
+      <h2 class="contact_email">joung4342@gmail.com</h2>
+      <h1 class="contact_link">
+        <a href="https://github.com/joung1010" target="_blank">
+          <i class="fab fa-github-alt"></i
+        ></a>
+      </h1>
+      <p class="contact__rights">2022 Mason park - All rights reserved</p>
 
-    <!-- arrow up -->
-    <button class="btn_arrow">
+      <!-- arrow up -->
+      <button class="btn_arrow">
         <i class="fas fa-arrow-up"></i>
-    </button>
-</section>
-</body>
+      </button>
+    </section>
+  </body>
 </html>
