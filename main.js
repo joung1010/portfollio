@@ -21,6 +21,7 @@ navbarMenu.addEventListener("click", (event) => {
   }
   toggleNavMenu.classList.remove("open");
   scrollIntoView(link);
+  selectNavItem(target);
 });
 
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
@@ -113,7 +114,6 @@ const observerOptions = {
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
-      console.log(entry);
       let target = entry.target.id;
       target = "#" + target;
       const index = sectionIds.indexOf(target);
@@ -134,3 +134,15 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+window.addEventListener("wheel", () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    window.scrollY + window.innerHeight ===
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
