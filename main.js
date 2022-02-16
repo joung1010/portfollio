@@ -130,11 +130,6 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach((section) => observer.observe(section));
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
-
 window.addEventListener("wheel", () => {
   if (window.scrollY === 0) {
     selectedNavIndex = 0;
@@ -146,3 +141,9 @@ window.addEventListener("wheel", () => {
   }
   selectNavItem(navItems[selectedNavIndex]);
 });
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
